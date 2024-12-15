@@ -1,0 +1,6 @@
+Вводите команды по порядку в терминал в директории с проектом.
+
+docker build -t tutoring_service_db .
+docker run --name tutoring_service_db -e POSTGRES_PASSWORD=yourpassword -d -p 5432:5432 tutoring_service_db
+docker exec -it tutoring_service_db psql -U postgres -d tutoring_service
+streamlit run app.py
